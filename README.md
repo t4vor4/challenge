@@ -12,10 +12,10 @@ Desenvolver uma aplicação HTML5 + CSS3 + JS
 - Mobile first e responsivo
 
 ## A missão
-Desenvolver o layout abaixo (PSD na pasta assets):
+Desenvolver uma página, baseando-se no wireframe abaixo (PSD e PNG na pasta assets):
 ![boticario](assets/eCommerce-Template.png)
 
-- Os produtos precisam ser consumidos de um .json (Está na pasta assets).
+- Os produtos precisam ser consumidos de um .json (está na pasta assets) via ajax.
 - Ao clicar no produto, o mesmo deve ser adicionado ao carrinho.
 - Último e não menos importante, deixe sua imaginação fluir.
 
