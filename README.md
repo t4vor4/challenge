@@ -15,7 +15,7 @@ Desenvolver uma aplicação HTML5 + CSS3 + JS
 Desenvolver uma página, baseando-se no wireframe abaixo (PSD e PNG na pasta assets):
 ![boticario](assets/eCommerce-Template.png)
 
-Hover:
+Hover mini cart:
 ![boticario](assets/hover-eCommerce-PSD-Template.png)
 
 - Os produtos precisam ser consumidos de um .json (está na pasta assets) via ajax.
