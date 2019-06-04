@@ -29,3 +29,5 @@ Hover mini cart:
 - Uso do Git
 - Documentação
 - Automação de tarefas (Gulp? Grunt? Webpack? :D)
+
+Acreditamos que 1 (um) dia, é um tempo legal para resolver o desafio proposto, mas sabemos que nem todo mundo tem o mesmo nível de disponibilidade. Portanto, nos avise se precisar de mais tempo ;)
