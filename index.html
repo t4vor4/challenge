@@ -4,29 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./dist/css/app.css">
     <script src="./dist/js/jquery/dist/jquery.min.js"></script>
     <title>Challenge</title>
 </head>
 <body>
-    <header>
-        <span class="logo">minha Loja</span>
-        <ul menu>
-            <li><a href="#">Perfumaria</a></li>
-            <li><a href="#">Maquiagem</a></li>
-            <li><a href="#">Cabelos</a></li>
-            <li><a href="#">Infantil</a></li>
-        </ul>
-    </header>
-    <section>
-        <h1>Ultimos produtos</h1>
-        <ul vitrine>
-            <li><img src="" alt="Imagem teste" />
-                <div>
-                    <span class="nome"></span>
-                    <span class="preco"></span>
+    <header menuopen="0" class="header">
+        <div class="header__central central">
+            <button class="header__mobile-bt" open="false">
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
+            </button>
+            <span class="header_logo">Minha Loja</span>
+            <ul class="header_menu" menu>
+                <li><a href="#">Perfumaria</a></li>
+                <li><a href="#">Maquiagem</a></li>
+                <li><a href="#">Cabelos</a></li>
+                <li><a href="#">Infantil</a></li>
+            </ul>
+            <a href="#" class="cart">
+                <div class="cart__content">
+                    <span class="cart__icon"></span>
+                    <!-- <span class="cart__valor" valorCart="0">Seu carrinho esta vazio.</span> -->
+                    <span class="cart__valor" valorCart="0">R$ 40,00</span>
                 </div>
-            </li>
+            </a>
+        </div>
+    </header>
+    <section class="vitrine">
+        <h1 class="title"><span>Ultimos produtos</span></h1>
+        <ul class="vitrine_content" vitrinecontent>
+            
         </ul>
     </section>
     <footer></footer>

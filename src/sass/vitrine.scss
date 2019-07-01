@@ -1,0 +1,100 @@
+.vitrine {
+    width: 100%;
+    display: inline-block;
+    .vitrine_content {       
+    }
+    
+    .title {
+        font-size: 1.2em;
+        text-transform: uppercase;
+        background-color: $branco;
+        text-align: center;
+        padding: 0 10px 10px;
+        border-top: 1px solid $cinza-claro;
+        width: 90%;
+        margin-left: 5%;
+        position: relative;
+        span {
+            background-color: $branco;
+            position: inherit;
+            top: -1px;
+            padding: 0 2px;
+            color: $cinza-escuro;
+            font-weight: normal;
+
+        }
+        @media(min-width: $desktop-min) {
+            display: inline-block;
+            max-width: 650px;
+            margin-left: 0;
+            font-size: 1em;            
+        }
+    }
+    @media(min-width: $desktop-min) {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+.vitrine_content {
+    display: grid;
+    margin: 0;
+    padding: 0 1em;
+    grid-gap: 1em;
+    grid-template-columns: 1fr 1fr;
+    @media(min-width: $tablet-min) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media (min-width: 900px) {
+        display: inline-grid;
+        max-width: 900px;
+        grid-gap: 1.2em;
+    }
+    li {
+        display: inline-block;
+        width: 100%;
+        position: relative;
+        img {
+            position: inherit;
+            width: 80%;
+            margin-left: 10%;
+            margin-bottom: 1em;
+            height: auto;
+        }
+        .nome {
+            height: 2.5em;
+            overflow: hidden;
+        }
+        .nome, .preco {
+            font-family: $font1;
+            font-size: 1em;
+            line-height: 1.2em;
+            text-align: center;
+            display: inline-block;
+            width: 100%;
+            color: $cinza-escuro;
+            margin-bottom: .5em;
+            font-weight: 600;
+        }
+        
+        @media(min-width: $desktop-min) {
+            background-color: $cinza;
+            text-align: center;
+            padding: 20px 10px;
+            transition: background-color .3s ease-in;
+            img {
+                mix-blend-mode: multiply;
+                max-width: 170px;
+                display: block;
+                margin: 0 auto 40px;
+            }
+            .nome, .preco {
+                font-size: .9em;
+                font-weight: 500;
+            }
+            &:hover {
+                background-color: $branco;
+            }
+        }
+    }
+}

@@ -1,6 +1,6 @@
-const url = './assets/products.json'
-const filtraJson = () => {
+function filtraJson() {
     let html = ''
+    const url = './assets/products.json'
     fetch(url)
         .then(resp => resp.json())
         .then(obj => {
@@ -11,16 +11,35 @@ const filtraJson = () => {
                 console.log()
                 html = html+`<li><img src="${img}" alt="Imagem do produto ${nome}" />
                 <div>
-                    <span class="nome">${nome}</span>
+                    <span class="nome" title="${nome}">${nome}</span>
                     <span class="preco">R$ ${valor}</span>
                 </div></li>` 
             })
         })
         .then( _ => {
             // console.log(html)
-            $('[vitrine]').append(html)
+            $('[vitrinecontent]').append(html)
 
         })
 }
 
-$(document).ready(filtraJson)
+function menuMobile() {
+    $('.header__mobile-bt').click(e => {
+        const header = $('.header');
+        if (header.attr('menuopen') === '0') {
+            header.attr('menuopen','1')
+            // console.log(header.attr('menuopen'))
+        } else {
+            header.attr('menuopen','0');
+            // console.log(header.attr('menuopen'))
+        }        
+    })
+}
+
+
+
+
+$(document).ready(() => {
+    filtraJson();
+    menuMobile();
+})

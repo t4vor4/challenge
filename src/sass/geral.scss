@@ -1,0 +1,16 @@
+/***************** Tamanhos de tela *******************/
+$mobile-max: 768px;
+$tablet-min: 770px;
+$tablet-max: 1049px;
+$desktop-min: 1050px;
+
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    font-family: $font1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
