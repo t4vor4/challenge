@@ -87,6 +87,7 @@
         border: 2px solid $cinza-escuro;
         position: relative;
         display: flex;
+        padding-bottom: 10px;
         justify-content: center;
         
         .cart__icon {
@@ -102,6 +103,62 @@
         .cart__valor {
             display: none;
         }        
+    }
+
+    .cartitens {
+        display: none;
+        @media(min-width: $desktop-min) {
+            display: block;
+        }
+        position: absolute;
+        width: auto;
+        height: auto;        
+        max-height: 0;
+        transition: all .3s;
+        overflow: hidden;
+        right: 0;
+        top: 60px;        
+        z-index: 10;
+        ul {
+            margin: 0;
+            padding: 0;
+            overflow-y: scroll;
+            background: $cinza_claro;
+            padding: 10px;
+            border: 2px solid $cinza_escuro;
+            border-radius: 10px;
+        }
+        li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            font-size: .9em;
+            span {
+                padding: 0 3px;
+            }
+            .nome {
+                white-space: nowrap; 
+                width: 250px; 
+                overflow: hidden;
+                text-overflow: ellipsis; 
+            }
+
+
+            +li {
+                margin-top: 5px;
+                border-top: 1px solid $cinza;
+                padding-top: 5px;
+            }
+        }
+
+
+        img {
+            max-width: 40px;
+        }
+    }
+
+    .cart:hover+.cartitens {
+        max-height: 1000px;
     }
     
 
@@ -172,7 +229,28 @@
         
         }
     }
+    .smallcall {
+        display: none;
+    }
     @media (min-width: $desktop-min) {
+        .smallcall {
+            display: block;
+            float: right;
+            position: fixed;
+            right: -100%;
+            opacity: 0;
+            top: 0;
+            background-color: $preto;
+            color: $branco;
+            padding: 20px;
+            transition: all .5s;
+        }
+
+        .smallcall.show {
+            right: 0;
+            opacity: 1;
+        }
+
         .cart {
             transition: all .5s ease-in-out;
             position: absolute;
